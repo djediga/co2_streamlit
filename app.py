@@ -6,7 +6,7 @@ import streamlit as st
 
 st.title('Co2 Emission per Country')
 
-co2_df = pd.read_csv("../../data/CO2_per_capita.csv", sep=";")
+co2_df = pd.read_csv("data/CO2_per_capita.csv", sep=";")
 
 
 #bar chart
@@ -51,4 +51,4 @@ fig = px.scatter_geo(co2_df, locations="Country Code",
                     hover_name="Country Name", # column added to hover information
                     size="CO2 Per Capita (metric tons)", # size of markers
                     animation_frame='Year')
-st.plotly_chart(fig)
+st.plotly_chart(fig)        
